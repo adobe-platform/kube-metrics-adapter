@@ -3,7 +3,7 @@ ARG GO_VERSION=1.17
 FROM golang:${GO_VERSION}-alpine AS builder
 
 
-# bzr supported in 3.14 https://pkgs.alpinelinux.org/package/v3.10/community/x86_64/bzr
+# bzr is not supported anymore https://pkgs.alpinelinux.org/package/v3.10/community/x86_64/bzr
 RUN apk add --update --no-cache bash make curl git mercurial breezy
 
 ENV GOFLAGS="-mod=readonly"
