@@ -1,32 +1,39 @@
 module github.com/zalando-incubator/kube-metrics-adapter
 
 require (
-	github.com/NYTimes/gziphandler v1.0.1 // indirect
-	github.com/aws/aws-sdk-go v1.16.6
-	github.com/coreos/go-systemd v0.0.0-20180705093442-88bfeed483d3 // indirect
-	github.com/golang/groupcache v0.0.0-20180513044358-24b0969c4cb7 // indirect
-	github.com/googleapis/gnostic v0.2.0 // indirect
-	github.com/grpc-ecosystem/grpc-gateway v1.4.1 // indirect
-	github.com/influxdata/influxdb-client-go v0.1.4
+	github.com/aws/aws-sdk-go v1.40.45
+	github.com/deepmap/oapi-codegen v1.8.2 // indirect
+	github.com/emicklei/go-restful v2.15.0+incompatible // indirect
+	github.com/felixge/httpsnoop v1.0.2 // indirect
+	github.com/fsnotify/fsnotify v1.5.1 // indirect
+	github.com/go-openapi/jsonreference v0.19.6 // indirect
+	github.com/imdario/mergo v0.3.6 // indirect
+	github.com/influxdata/influxdb-client-go v1.4.0
+	github.com/influxdata/line-protocol v0.0.0-20210311194329-9aa0e372d097 // indirect
+	github.com/kr/pretty v0.3.0 // indirect
 	github.com/kubernetes-incubator/custom-metrics-apiserver v0.0.0-20190918110929-3d9be26a50eb
 	github.com/oliveagle/jsonpath v0.0.0-20180606110733-2e52cf6e6852
-	github.com/prometheus/client_golang v0.9.2
-	github.com/prometheus/common v0.0.0-20181126121408-4724e9255275
-	github.com/sirupsen/logrus v1.4.2
-	github.com/soheilhy/cmux v0.1.4 // indirect
-	github.com/spf13/cobra v0.0.3
-	github.com/stretchr/testify v1.3.0
-	github.com/tmc/grpc-websocket-proxy v0.0.0-20171017195756-830351dc03c6 // indirect
-	github.com/zalando-incubator/cluster-lifecycle-manager v0.0.0-20180921141935-824b77fb1f84
-	golang.org/x/oauth2 v0.0.0-20190604053449-0f29369cfe45
-	gopkg.in/inf.v0 v0.9.1 // indirect
-	k8s.io/api v0.0.0-20190918155943-95b840bb6a1f
-	k8s.io/apimachinery v0.0.0-20190913080033-27d36303b655
-	k8s.io/apiserver v0.0.0-20190918160949-bfa5e2e684ad // indirect
-	k8s.io/client-go v0.0.0-20190918160344-1fbdaa4c8d90
-	k8s.io/component-base v0.0.0-20190918160511-547f6c5d7090
-	k8s.io/klog v0.4.0
-	k8s.io/metrics v0.0.0-20190226180357-f3f09b9076d1
+	github.com/prometheus/client_golang v1.11.0
+	github.com/prometheus/common v0.30.0
+	github.com/rogpeppe/go-internal v1.8.0 // indirect
+	github.com/sirupsen/logrus v1.8.1
+	github.com/spf13/cobra v1.2.1
+	github.com/stretchr/testify v1.7.0
+	github.com/zalando-incubator/cluster-lifecycle-manager v0.0.0-20210907132254-3a891a57dfaa
+	golang.org/x/crypto v0.0.0-20210915214749-c084706c2272 // indirect
+	golang.org/x/mod v0.5.0 // indirect
+	golang.org/x/net v0.0.0-20210917163549-3c21e5b27794 // indirect
+	golang.org/x/oauth2 v0.0.0-20210514164344-f6687ab2804c
+	golang.org/x/sys v0.0.0-20210917161153-d61c044b1678 // indirect
+	golang.org/x/text v0.3.7 // indirect
+	golang.org/x/tools v0.1.6 // indirect
+	k8s.io/api v0.22.2
+	k8s.io/apimachinery v0.22.2
+	k8s.io/apiserver v0.22.2 // indirect
+	k8s.io/client-go v0.22.2
+	k8s.io/component-base v0.22.2
+	k8s.io/klog v1.0.0
+	k8s.io/metrics v0.22.2
 )
 
-go 1.13
+go 1.17
