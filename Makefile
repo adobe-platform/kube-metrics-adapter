@@ -4,9 +4,9 @@ BINARY        ?= kube-metrics-adapter
 VERSION       ?= $(shell git describe --tags --always --dirty)
 IMAGE         ?= registry-write.opensource.zalan.do/teapot/$(BINARY)
 TAG           ?= $(VERSION)
-SOURCES       = $(shell find . -name '*.go')
+#SOURCES       = $(shell find . -name '*.go')
 DOCKERFILE    ?= Dockerfile
-GOPKGS        = $(shell go list ./...)
+#GOPKGS        = $(shell go list ./...)
 BUILD_FLAGS   ?= -v
 LDFLAGS       ?= -X main.version=$(VERSION) -w -s
 
@@ -35,8 +35,8 @@ build/linux/$(BINARY): go.mod $(SOURCES)
 build/osx/$(BINARY): go.mod $(SOURCES)
 	GOOS=darwin GOARCH=amd64 CGO_ENABLED=0 go build $(BUILD_FLAGS) -o build/osx/$(BINARY) -ldflags "$(LDFLAGS)" .
 
-build.docker: build.linux
-	docker build --rm -t "$(IMAGE):$(TAG)" -f $(DOCKERFILE) .
+build.docker:
+	docker build --rm -t "$(IMAGE):$(TAG)" -f $(DOCKERFILE) --build-arg VERSION=$(VERSION) .
 
 build.push: build.docker
 	docker push "$(IMAGE):$(TAG)"
